@@ -1,7 +1,9 @@
 Ciberseguridad: Detección de Anomalías en Tráfico de Red
 Tipo de problema: Preprocesamiento avanzado y lógica de negocio (Pandas/Numpy).
 
-En seguridad informática, los picos repentinos de tráfico pueden indicar un ataque DDoS. Tu función debe identificar qué IPs están generando un tráfico sospechoso basándose en la desviación estándar, pero solo en ventanas de tiempo específicas.
+En seguridad informática, los picos repentinos de tráfico pueden indicar un ataque DDoS. 
+Tu función debe identificar qué IPs están generando un tráfico sospechoso basándose en la desviación estándar, 
+pero solo en ventanas de tiempo específicas.
 
 Nombre de la función: detectar_ataque_ddos
 
