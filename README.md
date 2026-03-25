@@ -1,4 +1,4 @@
-# ai4eng-20262-python-questions
+#Data Science Questions
 
 Student: Andres Eduardo Pabon Roldan
 
