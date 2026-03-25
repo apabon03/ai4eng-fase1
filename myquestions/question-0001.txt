@@ -11,6 +11,7 @@ Nombre del generador: generar_caso_de_uso_detectar_ataque_ddos
 
 Entrada: Un pd.DataFrame con columnas ip_origen (str), bytes_transmitidos (int) y timestamp (datetime).
 
-Salida: Una lista de strings con las ip_origen cuyo tráfico supere en 3 veces la desviación estándar del tráfico promedio global del dataset.
+Salida: Una lista de strings con las ip_origen cuyo tráfico supere en 3 veces la desviación estándar
+del tráfico promedio global del dataset.
 
 Reto: Usar numpy.std() y filtrado avanzado de pandas.
