@@ -1,17 +1,15 @@
-Energías Renovables: Predicción de Potencia Solar (Regresión)
-Tipo de problema: Aprendizaje Supervisado / Regresión (Sklearn/Numpy).
+Clasificación con Stacking (Sklearn)
+El Problema:
+A veces un solo modelo no es suficiente. El "Stacking" permite usar las predicciones de varios modelos como entrada para un modelo final (meta-modelo) que toma la decisión definitiva.
 
-Un parque solar necesita predecir cuántos Kilovatios (kW) generará según la radiación UV y la nubosidad. 
-A diferencia del CSV (que usa clasificación), aquí predeciremos un valor continuo.
+Tu Misión:
+Escribe una función llamada treinar_modelo_stacking(X, y) que:
 
-Nombre de la función: predecir_potencia_solar
+Configure un StackingClassifier que use dos estimadores base: un RandomForestClassifier y un KNeighborsClassifier.
 
-Nombre del generador: generar_caso_de_uso_predecir_potencia_solar
+Use una LogisticRegression como estimador final (final_estimator).
 
-Entrada: Un pd.DataFrame con variables independientes (radiacion_uv, indice_nubosidad, temperatura_panel) 
-y una variable dependiente continua (potencia_kw).
+Entrene el ensamble con los datos X e y y retorne el modelo entrenado.
 
-Salida: Una tupla con el modelo entrenado y el error absoluto medio (MAE) obtenido en el test set.
-
-Reto: Usar RandomForestRegressor de sklearn para manejar relaciones no lineales.
-
+Entrada: X (numpy array o DataFrame), y (numpy array o Series).
+Salida: Objeto StackingClassifier entrenado.
