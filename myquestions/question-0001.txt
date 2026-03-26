@@ -1,17 +1,8 @@
-Ciberseguridad: Detección de Anomalías en Tráfico de Red
-Tipo de problema: Preprocesamiento avanzado y lógica de negocio (Pandas/Numpy).
+Detección de Micro-Tendencias Financieras (Pandas/Numpy)
+El Problema: En el trading de alta frecuencia, es vital identificar periodos donde la volatilidad supera la media móvil de forma repentina.
 
-En seguridad informática, los picos repentinos de tráfico pueden indicar un ataque DDoS. 
-Tu función debe identificar qué IPs están generando un tráfico sospechoso basándose en la desviación estándar, 
-pero solo en ventanas de tiempo específicas.
+Función a crear: detectar_picos_volatilidad
 
-Nombre de la función: detectar_ataque_ddos
+Entrada: Un pd.DataFrame con columnas ['timestamp', 'precio_cierre'].
 
-Nombre del generador: generar_caso_de_uso_detectar_ataque_ddos
-
-Entrada: Un pd.DataFrame con columnas ip_origen (str), bytes_transmitidos (int) y timestamp (datetime).
-
-Salida: Una lista de strings con las ip_origen cuyo tráfico supere en 3 veces la desviación estándar
-del tráfico promedio global del dataset.
-
-Reto: Usar numpy.std() y filtrado avanzado de pandas.
+Salida: Un pd.DataFrame que contenga solo las filas donde la diferencia entre el precio actual y el promedio de los últimos 5 periodos sea superior a 2 desviaciones estándar.
