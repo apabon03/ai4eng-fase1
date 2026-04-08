@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.inspection import permutation_importance
 from sklearn.model_selection import train_test_split
 
-def generar_caso_importancia_permutacion():
+def generar_caso_de_uso_importancia_permutacion():
     """
     Genera un caso de prueba aleatorio (input y output esperado)
     para la función calcular_importancia_permutacion.
@@ -26,7 +26,6 @@ def generar_caso_importancia_permutacion():
     X = np.random.randn(n_rows, n_features)
     y = np.random.randint(0, 2, size=n_rows)
     
-    # Opcional: usar DataFrame para hacerlo más realista
     if random.choice([True, False]):
         feature_cols = [f'feature_{i}' for i in range(n_features)]
         X = pd.DataFrame(X, columns=feature_cols)
@@ -57,7 +56,7 @@ def generar_caso_importancia_permutacion():
     }
     
     # ---------------------------------------------------------
-    # 6. Calcular OUTPUT esperado (Ground Truth)
+    # 6. Calcular OUTPUT esperado
     # ---------------------------------------------------------
     
     resultado = permutation_importance(
@@ -74,11 +73,11 @@ def generar_caso_importancia_permutacion():
 
 
 # ---------------------------------------------------------
-# Ejemplo de uso
+# (Opcional) Ejemplo de uso
 # ---------------------------------------------------------
 if __name__ == "__main__":
     
-    entrada, salida_esperada = generar_caso_importancia_permutacion()
+    entrada, salida_esperada = generar_caso_de_uso_importancia_permutacion()
     
     print("=== INPUT ===")
     print(f"Modelo: {type(entrada['modelo'])}")
